@@ -1,0 +1,39 @@
+body {
+  height: 100vh;
+  margin: 0;
+}
+webview {
+  height: 100%;
+}
+.electronSearchText-box {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 40px;
+  box-sizing: border-box;
+  height: 40px;
+  padding: 5px;
+  background-color: #fff;
+  border-left: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 1px 1px 0px rgba(0,0,0,0.3);
+}
+.electronSearchText-input {
+  box-sizing: border-box;
+  width: 220px;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 2px;
+  border: 1px solid rgba(0,0,0,.1);
+  outline-width: 2px;
+  padding-right: 30px;
+}
+.electronSearchText-count {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  line-height: 40px;
+}
+
+.electronSearchText-visible {
+  display: block;
+}
