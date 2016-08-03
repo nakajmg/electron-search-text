@@ -1,6 +1,8 @@
 # electron-search-text
 electron findInPage wrapper module
 
+see and try [example](./example)
+
 ## usage
 
 ```html
@@ -23,10 +25,9 @@ electron findInPage wrapper module
   <input type="text" class="electronSearchText-input">
   <span class="electronSearchText-count"></span>
 </div>
-<webview src="./webview.html" preload="./webview.js" id="preview"></webview>
+<webview id="preview" src="./webview.html" preload="./webview.js"></webview>
 <script>
   const {ipcRenderer} = require('electron');
-  const $preview = document.querySelector('#preview');
 
   const ElectronSearchText = require('./electron-search-text');
   const searcher = new ElectronSearchText({
@@ -41,7 +42,7 @@ electron findInPage wrapper module
 </html>
 ```
 
-options
+## options
 
 ```js
 const searcher = new ElectronSearchText({
