@@ -3,7 +3,7 @@ electron findInPage wrapper module
 
 see and try [example](./example)
 
-![./example/example.gif]
+![./example/example.gif](./example/example.gif)
 
 ## usage
 
