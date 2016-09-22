@@ -1,6 +1,6 @@
 {
   "name": "electron-search-text",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Search in text module for electron",
   "main": "index.js",
   "scripts": {
