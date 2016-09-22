@@ -37,6 +37,8 @@ const ElectronSearchText = (function() {
       this.$searchInput.addEventListener('keydown', this._onKeydown.bind(this));
       this.$searchInput.addEventListener('keyup', this._onKeyup.bind(this));
       this.on('toggle', this.toggleSearch.bind(this));
+      this.on('show', this.show.bind(this));
+      this.on('hide', this.hide.bind(this));
     },
 
     /*
@@ -78,15 +80,24 @@ const ElectronSearchText = (function() {
     toggleSearch() {
       const visibleClass = this.visibleClass.substring(1);
       const isVisible = this.$searchBox.classList.contains(visibleClass);
-      if (isVisible) {
-        this.$searchBox.classList.remove(visibleClass);
-        this.$searchInput.blur();
-        this.stopFindInPage();
-      }
-      else {
-        this.$searchBox.classList.add(visibleClass);
-        this.$searchInput.focus();
-      }
+      isVisible ? this.hide() : this.show();
+    },
+
+    /*
+    * show search input
+    * */
+    show() {
+      this.$searchBox.classList.remove(visibleClass);
+      this.$searchInput.blur();
+      this.stopFindInPage();
+    },
+
+    /*
+    * hide search input
+    * */
+    hide() {
+      this.$searchBox.classList.add(visibleClass);
+      this.$searchInput.focus();
     },
 
     /*
