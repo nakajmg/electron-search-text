@@ -88,9 +88,8 @@ const ElectronSearchText = (function() {
     * */
     show() {
       const visibleClass = this.visibleClass.substring(1);
-      this.$searchBox.classList.remove(visibleClass);
-      this.$searchInput.blur();
-      this.stopFindInPage();
+      this.$searchBox.classList.add(visibleClass);
+      this.$searchInput.focus();
     },
 
     /*
@@ -98,8 +97,9 @@ const ElectronSearchText = (function() {
     * */
     hide() {
       const visibleClass = this.visibleClass.substring(1);
-      this.$searchBox.classList.add(visibleClass);
-      this.$searchInput.focus();
+      this.$searchBox.classList.remove(visibleClass);
+      this.$searchInput.blur();
+      this.stopFindInPage();
     },
 
     /*
