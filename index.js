@@ -87,6 +87,7 @@ const ElectronSearchText = (function() {
     * show search input
     * */
     show() {
+      const visibleClass = this.visibleClass.substring(1);
       this.$searchBox.classList.remove(visibleClass);
       this.$searchInput.blur();
       this.stopFindInPage();
@@ -96,6 +97,7 @@ const ElectronSearchText = (function() {
     * hide search input
     * */
     hide() {
+      const visibleClass = this.visibleClass.substring(1);
       this.$searchBox.classList.add(visibleClass);
       this.$searchInput.focus();
     },
