@@ -90,6 +90,7 @@ const ElectronSearchText = (function() {
       const visibleClass = this.visibleClass.substring(1);
       this.$searchBox.classList.add(visibleClass);
       this.$searchInput.focus();
+      this.emit('did-finish-show')
     },
 
     /*
@@ -100,6 +101,7 @@ const ElectronSearchText = (function() {
       this.$searchBox.classList.remove(visibleClass);
       this.$searchInput.blur();
       this.stopFindInPage();
+      this.emit('did-finish-hide')
     },
 
     /*
@@ -153,6 +155,7 @@ const ElectronSearchText = (function() {
         case 'Escape':
           this.stopFindInPage();
           this.toggleSearch();
+          this.emit('did-press-escape');
           break;
 
         // cmd+g : find forward
