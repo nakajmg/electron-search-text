@@ -1,6 +1,6 @@
 const _ = require('lodash');
 const util = require('util');
-const {EventEmitter2} = require('eventemitter2');
+const EventEmitter2 = require('eventemitter2').EventEmitter2;
 
 const DEFAULT_OPTIONS = {
   target: 'webview',
@@ -45,7 +45,7 @@ const ElectronSearchText = (function() {
      * call findInPage
      * */
     _findInPage(text, forward) {
-      let findNext = false;
+      var findNext = false;
       // stop search when text is empty
       if (text === '') {
         this.prevText = '';
